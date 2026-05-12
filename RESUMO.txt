@@ -1,0 +1,133 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                   SOMATIVA 3 - IDS EM TEMPO REAL                         ║
+║              Intrusion Detection System com Threads                       ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+📦 ENTREGA COMPLETA - Todos os arquivos prontos!
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ ⭐ ARQUIVOS PRINCIPAIS                                                    │
+├──────────────────────────────────────────────────────────────────────────┤
+│ somativa3.py          → Código final (versão 2B - MELHOR IMPLEMENTAÇÃO)  │
+│ RELATORIO.md          → Relatório completo com análise detalhada         │
+│ README.md             → Instruções de uso e documentação                 │
+│ executar_todos.py     → Script para executar todas as versões            │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 📁 CÓDIGOS FONTE (TODAS AS VERSÕES)                                      │
+├──────────────────────────────────────────────────────────────────────────┤
+│ Parte 1 - Condição de Corrida:                                           │
+│   somativa_1a.py     → Sem lock (race condition proposital)              │
+│   somativa_1b.py     → Single lock global (serialização)                 │
+│   somativa_1c.py     → Locks individuais (MELHOR da Parte 1)             │
+│                                                                           │
+│ Parte 2 - Alertas em Tempo Real:                                         │
+│   somativa_2a.py     → Sem lock na verificação (inconsistente)           │
+│   somativa_2b.py     → Com lock completo (MELHOR da Parte 2)             │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 📊 RESULTADOS DAS EXECUÇÕES                                              │
+├──────────────────────────────────────────────────────────────────────────┤
+│ alerta_1a_final.txt  → 24 alertas (valores INCONSISTENTES)               │
+│ alerta_1b_final.txt  → 24 alertas (8 filas cheias/rodada)                │
+│ alerta_1c_final.txt  → 24 alertas (valores corretos, 0 filas)            │
+│ alerta_2a_final.txt  → 51 alertas (MUITAS DUPLICAÇÕES)                   │
+│ alerta_2b_final.txt  → 47 alertas (alertas corretos)                     │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 🗂️ ARQUIVOS AUXILIARES                                                   │
+├──────────────────────────────────────────────────────────────────────────┤
+│ myscapyLib.py        → Biblioteca de funções Scapy                       │
+│ desafio.pcap         → Arquivo de captura (5000 pacotes)                 │
+└──────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+🏆 RESUMO DOS RESULTADOS
+═══════════════════════════════════════════════════════════════════════════
+
+┌─────────────┬──────────────┬─────────────┬───────────┬─────────────────┐
+│   Versão    │ Consistência │ Desempenho  │ Fila Cheia│  Recomendado?   │
+├─────────────┼──────────────┼─────────────┼───────────┼─────────────────┤
+│ 1A Sem Lock │      ❌      │      ✅     │     0     │       ❌        │
+│ 1B Single   │      ✅      │      ❌     │     8     │       ❌        │
+│ 1C Individ. │      ✅      │      ✅     │     0     │   ✅ MELHOR!    │
+│ 2A Sem Ver. │      ❌      │      ✅     │     0     │       ❌        │
+│ 2B Com Ver. │      ✅      │      ✅     │     0     │   ✅ MELHOR!    │
+└─────────────┴──────────────┴─────────────┴───────────┴─────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════
+🎓 CONCEITOS DEMONSTRADOS
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Modelo Produtor-Consumidor com Queue
+✓ Race Conditions em dados compartilhados
+✓ Sincronização com Locks (Mutex)
+✓ Granularidade de locks (trade-off consistência vs. desempenho)
+✓ Seções críticas completas vs. parciais
+✓ Threading em Python (Thread, Lock, Queue)
+✓ Detecção de ataques DoS/DDoS em tempo real
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 COMO USAR
+═══════════════════════════════════════════════════════════════════════════
+
+Execução rápida (versão final):
+  $ python3 somativa3.py
+
+Executar todas as versões automaticamente:
+  $ python3 executar_todos.py
+
+Ver relatório completo:
+  $ cat RELATORIO.md
+  ou abrir RELATORIO.md em qualquer editor Markdown
+
+═══════════════════════════════════════════════════════════════════════════
+🔍 ATAQUES DETECTADOS NO PCAP
+═══════════════════════════════════════════════════════════════════════════
+
+ICMP Flood (Ping Flood):
+  • IP 33.45.9.23 → enviando 370 pacotes ICMP
+  • IP 10.95.32.205 → recebendo 900 pacotes ICMP (vítima)
+
+SYN Flood:
+  • IP 10.0.2.15 → enviando 1060 pacotes SYN
+  • IPs 44.25.32.17, 192.168.56.1, 172.18.160.1, 10.95.32.205 → vítimas
+
+Port Scan:
+  • IP 10.0.2.15 → scaneando 575 portas diferentes
+
+═══════════════════════════════════════════════════════════════════════════
+📚 DOCUMENTAÇÃO
+═══════════════════════════════════════════════════════════════════════════
+
+RELATORIO.md:
+  - Análise detalhada de cada versão (1A, 1B, 1C, 2A, 2B)
+  - Explicação dos problemas de race condition
+  - Comparação de resultados com justificativas técnicas
+  - Conclusões sobre locks e seções críticas
+
+README.md:
+  - Como instalar dependências (scapy)
+  - Como executar cada versão
+  - Descrição dos ataques detectados
+  - Troubleshooting
+
+═══════════════════════════════════════════════════════════════════════════
+✅ STATUS: PROJETO COMPLETO E PRONTO PARA ENTREGA!
+═══════════════════════════════════════════════════════════════════════════
+
+Todos os requisitos atendidos:
+  ✓ Código montado corretamente
+  ✓ Parte 1A, 1B, 1C executadas (3x cada)
+  ✓ Parte 2A, 2B executadas (1x cada)
+  ✓ Arquivos de alerta gerados
+  ✓ Análise de consistência/inconsistência
+  ✓ Explicações técnicas detalhadas
+  ✓ Relatório completo formatado
+  ✓ README com instruções
+  ✓ Script auxiliar de execução
+
+═══════════════════════════════════════════════════════════════════════════
