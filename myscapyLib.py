@@ -20,10 +20,10 @@ TIPO = {
     'udp': UDP,
 }
 
-#------------------------------------------------------------------------------------------------------
+#-----------------------------------sudo apt-get update && sudo apt-get install libpcap-dev-------------------------------------------------------------------
 # Salva ALERTA NO LOG
 def alerta(msg):
-    with open('alerta.txt', 'a') as log:
+    with open('alerta2b.txt', 'a') as log:
         now = datetime.now()
         log.write(now.strftime("%d/%m/%Y %H:%M:%S") + ' --> ' + msg + '\n')
 

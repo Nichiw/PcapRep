@@ -1,0 +1,24 @@
+12/05/2026 19:37:02 --> O IP 33.45.9.23 esta fazendo ICMP Flood: 370 pacotes
+12/05/2026 19:37:02 --> O IP 10.95.32.205 esta sendo atacado por ICMP Flood: 900 pacotes
+12/05/2026 19:37:02 --> O IP 10.0.2.15 esta fazendo SYN Flood: 1060 pacotes
+12/05/2026 19:37:02 --> O IP 44.25.32.17 esta sendo atacado por SYN Flood: 318 pacotes
+12/05/2026 19:37:02 --> O IP 192.168.56.1 esta sendo atacado por SYN Flood: 168 pacotes
+12/05/2026 19:37:02 --> O IP 172.18.160.1 esta sendo atacado por SYN Flood: 619 pacotes
+12/05/2026 19:37:02 --> O IP 10.95.32.205 esta sendo atacado por SYN Flood: 574 pacotes
+12/05/2026 19:37:02 --> O IP 10.0.2.15 esta fazendo PORT SCAN: 575 portas
+12/05/2026 19:37:26 --> O IP 33.45.9.23 esta fazendo ICMP Flood: 370 pacotes
+12/05/2026 19:37:26 --> O IP 10.95.32.205 esta sendo atacado por ICMP Flood: 900 pacotes
+12/05/2026 19:37:26 --> O IP 10.0.2.15 esta fazendo SYN Flood: 1060 pacotes
+12/05/2026 19:37:26 --> O IP 44.25.32.17 esta sendo atacado por SYN Flood: 318 pacotes
+12/05/2026 19:37:26 --> O IP 192.168.56.1 esta sendo atacado por SYN Flood: 168 pacotes
+12/05/2026 19:37:26 --> O IP 172.18.160.1 esta sendo atacado por SYN Flood: 619 pacotes
+12/05/2026 19:37:26 --> O IP 10.95.32.205 esta sendo atacado por SYN Flood: 574 pacotes
+12/05/2026 19:37:26 --> O IP 10.0.2.15 esta fazendo PORT SCAN: 575 portas
+12/05/2026 19:37:39 --> O IP 33.45.9.23 esta fazendo ICMP Flood: 370 pacotes
+12/05/2026 19:37:39 --> O IP 10.95.32.205 esta sendo atacado por ICMP Flood: 900 pacotes
+12/05/2026 19:37:39 --> O IP 10.0.2.15 esta fazendo SYN Flood: 1060 pacotes
+12/05/2026 19:37:39 --> O IP 44.25.32.17 esta sendo atacado por SYN Flood: 318 pacotes
+12/05/2026 19:37:39 --> O IP 192.168.56.1 esta sendo atacado por SYN Flood: 168 pacotes
+12/05/2026 19:37:39 --> O IP 172.18.160.1 esta sendo atacado por SYN Flood: 619 pacotes
+12/05/2026 19:37:39 --> O IP 10.95.32.205 esta sendo atacado por SYN Flood: 574 pacotes
+12/05/2026 19:37:39 --> O IP 10.0.2.15 esta fazendo PORT SCAN: 575 portas
